@@ -4,20 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Now</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+        .donate-btn {
+            background: #28a745;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .donate-btn:hover {
+            background: #218838;
+        }
+        .qr-code {
+            margin-top: 15px;
+            width: 200px;
+            border-radius: 10px;
+        }
+    </style>
     <script>
         function redirectToUPI() {
             window.location.href = "upi://pay?pa=meharshit@fam&pn=Harshit&cu=INR";
         }
         window.onload = function() {
-            setTimeout(redirectToUPI, 1000);
+            setTimeout(redirectToUPI, 2000); // 2-sec delay before redirection
         };
     </script>
 </head>
 <body>
-    <h2>Support My Work</h2>
-    <p>Redirecting to UPI payment...</p>
-    <p>If not redirected, <a href="upi://pay?pa=meharshit@fam&pn=Harshit&cu=INR"><button>Click Here to Donate</button></a></p>
-    <p>Or scan the QR code below:</p>
-    <img src="your-qr-code-image.png" alt="Donate via UPI" width="200px">
+
+    <div class="container">
+        <h2>Support My Work 🙌</h2>
+        <p>Redirecting you to UPI payment...</p>
+
+        <p>If not redirected, click the button below:</p>
+        <a href="upi://pay?pa=meharshit@fam&pn=Harshit&cu=INR" class="donate-btn">Donate via UPI</a>
+
+        <p>Or scan the QR code:</p>
+        <img src="your-qr-code-image.png" alt="Donate via UPI" class="qr-code">
+    </div>
+
 </body>
 </html>
